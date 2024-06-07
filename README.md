@@ -2,6 +2,7 @@
 ## Preview
 ## 기말 프로젝트 평가사항
 ![image](https://github.com/KIm-Yu-Gyum/Travel_web/assets/81911567/2d3b2785-fe36-4906-8c9c-d4c8ef135da5)
+![image](https://github.com/KIm-Yu-Gyum/Travel_web/assets/81911567/01e66d19-a5ca-4bff-84ee-7ea4a1f762ae)
 ## License
 Editorial by HTML5 UP
 html5up.net | @ajlkn
