@@ -1,5 +1,6 @@
 # Travel_web
 ## 표준웹 테크놀러지 기말 프로젝트
+![image](https://github.com/KIm-Yu-Gyum/Travel_web/assets/81911567/2d3b2785-fe36-4906-8c9c-d4c8ef135da5)
 ## License
 Editorial by HTML5 UP
 html5up.net | @ajlkn
