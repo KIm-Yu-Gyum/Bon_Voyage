@@ -1,10 +1,6 @@
 # Travel_web
 ## Site Map
-1. Home
-![image](https://github.com/KIm-Yu-Gyum/Travel_web/assets/81911567/89218dd3-005f-4670-9a74-5ebdde6a5194)
-
-1-1. sidebar
-![image](https://github.com/KIm-Yu-Gyum/Travel_web/assets/81911567/d70bd7c9-508d-4a29-9faa-a03cff2b00c1)
+![image](https://github.com/KIm-Yu-Gyum/Travel_web/assets/81911567/55997ef4-3b51-4085-96a8-f43ba15f6955)
 
 ## 기말 프로젝트 평가사항
 1. 평가 기준
