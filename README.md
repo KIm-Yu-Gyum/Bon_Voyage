@@ -1,5 +1,7 @@
 # Travel_web
-## Preview
+## Site Map
+![image](https://github.com/KIm-Yu-Gyum/Travel_web/assets/81911567/55997ef4-3b51-4085-96a8-f43ba15f6955)
+
 ## 기말 프로젝트 평가사항
 1. 평가 기준
 - 발표 태도 (개요, 기획력, 전달력)
@@ -30,6 +32,7 @@
 - page 수 선정할 것, 템플릿 화면을 어떻게 수정할 것인지? 어떻게 변형할 것인지? -> https://www.figma.com/ (참고 사이트)
 - 6월 13일 : 프로젝트 중간 Review (중간발표, 피드백)
 - 6월 20일 : 기말고사 최종발표
+  
 ## License
 Editorial by HTML5 UP
 html5up.net | @ajlkn
