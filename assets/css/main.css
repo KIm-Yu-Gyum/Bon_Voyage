@@ -1880,6 +1880,15 @@ button,
         padding: 3em 0 1em 0 ; } }
 
 /* Sidebar */
+#bar_icon {
+  width: 15px;
+  height: 15px;
+  float: left;
+  top: 0; left: 0;
+  border-radius: 5%;
+  margin: 0 8px 0 0;
+}
+
 #search form {
   text-decoration: none;
   position: relative; }
