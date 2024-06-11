@@ -1013,7 +1013,7 @@ header.major > :last-child {
   border-bottom: solid 3px gray;
   display: inline-block;
   margin: 2em 0 2em 0;
-  padding: 0 0 0 0; }
+  padding: 0 0.75em 0.5em 0; }
 
 header.main > :last-child {
   margin: 0 0 1em 0; }
@@ -2160,7 +2160,7 @@ button,
     #banner .image img {
       height: 100%;
       width: 100%; 
-      border-radius: 15px;}
+      border-radius: 20px;}
   @media screen and (orientation: portrait) {
     #banner {
       -moz-flex-direction: column-reverse;
