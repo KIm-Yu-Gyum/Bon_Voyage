@@ -1031,7 +1031,7 @@ hr {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
   justify-content: center;
-  margin: 1em 0 2em 0;
+  margin: 1em 0 0 0;
 }
 .image-grid img {
   width: 100%; /* 너비를 상대적으로 설정 */
@@ -1085,6 +1085,16 @@ header.main > :last-child {
   margin: 1em 0 1em 0; }
 
 
+/* 06.13 김유겸 activity 중 글꼴 수정 */
+
+section > p {
+  color: black;
+}
+
+.main .source {
+  color: #7f888f;
+  margin: 0 0 1em 0;
+}
 .main .author {color: blue;}
 
 .main a {
@@ -1107,6 +1117,34 @@ header.main > :last-child {
 
 .main h3 {
   margin: 1em 0 0 0;
+}
+
+#text_icon {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  top: 5px; left: 0;
+  margin: 0 7px 0 10px;
+}
+
+#text_icon2 {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: 5px; left: 0;
+  margin: 0 7px 0 10px;
+}
+
+#text_icon3 {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  top: 0; left: 0;
+  margin: 0 7px 0 10px;
+}
+
+#text_align {
+  margin: 0 0 1em 0;
 }
 
 /* Form */
@@ -1342,7 +1380,7 @@ input[type="radio"] + label:before {
       width: 100%; }
   .image.main {
     display: block;
-    margin: 0 0 3em 0;
+    margin: 0 0 0 0;
     width: 100%; }
     .image.main img {
       width: 100%; }
@@ -2204,27 +2242,11 @@ button,
   margin: 0 8px 0 0;
 }
 
-#text_icon {
-  width: 35px;
-  height: 35px;
-  position: relative;
-  top: 5px; left: 0;
-  margin: 0 7px 0 10px;
-}
-
-#text_icon2 {
-  width: 30px;
-  height: 30px;
-  position: relative;
-  top: 5px; left: 0;
-  margin: 0 7px 0 10px;
-}
-
-
 .image object > img {
   text-align: center;
   width: 100px;
 }
+
 /* index.html */
 #header {
   display: -moz-flex;
