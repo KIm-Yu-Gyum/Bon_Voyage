@@ -2007,12 +2007,14 @@ button,
     padding: 0 6em 0.1em 6em ;
     margin: 0 auto;
     max-width: 110em;
-    background-color: #9fa3a6;}
+    background-color: #cbcbcb;}
     #main > .inner > section {
       padding: 0em 0 4em 0 ;
       border-top: solid 2px rgba(210, 215, 217, 0.75); }
       #main > .inner > section:first-of-type {
         border-top: 0 !important; }
+      #main > .inner h1{
+        margin-bottom: 0; }
   @media screen and (max-width: 1680px) {
     #main > .inner {
       padding: 0 5em 0.1em 5em ; }
@@ -2158,13 +2160,7 @@ button,
     margin-left: -26em; }
   @media screen and (max-width: 1680px) {
     #sidebar {
-      width: 24em; 
-      box-shadow: 0 0 5em 0 rgba(0, 0, 0, 0.175);
-      height: 100%;
-      left: 0;
-      position: fixed;
-      top: 0;
-      z-index: 10000; }
+      width: 24em; }
       #sidebar > .inner {
         padding: 1.66667em 1.66667em 1.33333em 1.66667em ;
         width: 24em; }
@@ -2300,7 +2296,7 @@ button,
     #banner .image img {
       height: 100%;
       width: 100%; 
-      border-radius: 20px;}
+      border-radius: 1em;}
   @media screen and (orientation: portrait) {
     #banner {
       -moz-flex-direction: column-reverse;

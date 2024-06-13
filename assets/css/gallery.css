@@ -1,0 +1,24 @@
+.gallery {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+gap: 20px;
+list-style: none;
+padding: 0;
+}
+.gallery li {
+overflow: hidden;
+padding: 1em;
+border-radius: 8px;
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.gallery img {
+display: block;
+width: 100%;
+height: auto;
+}
+a h3 {
+margin-bottom: 0;
+}
+    a h3:hover {
+    color: #cbcbcb !important; 
+    }
