@@ -9,10 +9,45 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+/* 김유겸 추가 CSS */
+@font-face {
+  font-family: 'Freesentation-9Black';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-9Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+#bar_icon {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  top: 0; left: 0;
+  margin: 0 5px 0 0;}
+
+#bar_icon2 {
+  width: 17px;
+  height: 17px;
+  float: right;
+}
+
+#bar_icon3 {
+  width: 100px;
+  height: auto;
+  float: right;
+}
+
 body {
   background: #ffffff;
   color: #898989;
-  font-family: "Poppins", helvetica;
+  font-family: "Freesentation-9Black", helvetica;
   font-size: 15px;
   font-weight: 300;
   line-height: 20px;
