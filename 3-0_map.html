@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Interactive World Map</title>
+    <title>지도 | Bon-Voyage</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="icon" href="images/main_icon.png">
@@ -13,44 +13,133 @@
         }
     </style>
 </head>
-<body>
-    <div id="main">
-        <div class="inner">
-            <!-- Header -->
-                <header id="header">
-                    <a href="index.html" class="logo"><img src="images/main_icon.png" id="main_icon"><strong>Bon-Voyage</strong></a>
-                </header>
+<body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+            <div id="main">
+                <div class="inner">
+                    <!-- Header -->
+                        <header id="header">
+                            <a href="index.html" class="logo"><img src="images/main_icon.png" id="main_icon"><strong>Bon-Voyage</strong></a>
+                        </header>
+                        <div id="map"></div>
+                        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+                        <script src="https://unpkg.com/leaflet-providers@1.5.0/leaflet-providers.js"></script>
+                        <script>
+                            // 지도 생성
+                            var map = L.map('map').setView([20, 0], 2);
+                    
+                            // 타일 레이어 추가 (OpenStreetMap 사용)
+                            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                maxZoom: 18,
+                                attribution: '© OpenStreetMap'
+                            }).addTo(map);
+                    
+                            // 각 나라의 좌표와 이름 (예시로 몇 개의 나라만 추가)
+                            var countries = [
+                                { name: "South Korea", coords: [35.9078, 127.7669], url: "https://en.wikipedia.org/wiki/South_Korea" },
+                                { name: "United States", coords: [37.0902, -95.7129], url: "https://en.wikipedia.org/wiki/United_States" },
+                                { name: "France", coords: [46.6034, 1.8883], url: "https://en.wikipedia.org/wiki/France" },
+                                { name: "Japan", coords: [36.2048, 138.2529], url: "https://en.wikipedia.org/wiki/Japan" }
+                            ];
+                    
+                            // 각 나라에 마커 추가 및 클릭 이벤트 핸들러 등록
+                            countries.forEach(function(country) {
+                                var marker = L.marker(country.coords).addTo(map);
+                                marker.bindPopup(country.name);
+                                marker.on('click', function() {
+                                    window.open(country.url, '_blank');
+                                });
+                            });
+                        </script>
+                </div>
+            </div>
+        
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div class="inner">
+
+                <!-- Search -->
+                    <section id="search" class="alt">
+                        <form method="post" action="#">
+                            <input type="text" name="query" id="query" placeholder="Search" />
+                        </form>
+                    </section>
+
+                <!-- Menu -->
+                    <nav id="menu">
+                        <header class="major">
+                            <h2>MENU</h2>
+                        </header>
+                        <ul>
+                            <li><a href="index.html"><img src="images/home.png" id="bar_icon"><b>HOME</b></a></li>
+                            <li>
+                                <span class="opener"><img src="images/hashtag.png" id="bar_icon"><b>THEME</b></span>
+                                <ul>
+                                    <li><a href="2-0_theme.html">Total</a></li>
+                                    <li><a href="2-1_activity.html">#activity</a></li>
+                                    <li><a href="#">#food</a></li>
+                                    <li><a href="#">#sports</a></li>
+                                    <li><a href="#">#art</a></li>
+                                    <li><a href="#">#history</a></li>
+                                    <li><a href="#">#vacation</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="3-0_map.html"><img src="images/earth.png" id="bar_icon"><b>MAP</b></a></li>
+                            <li>
+                                <span class="opener"><img src="images/promotion.png" id="bar_icon"><b>PROMOTION</b></span>
+                                <ul>
+                                    <li><a href="4-0_promotion.html">Total</a></li>
+                                    <li><a href="#">Article</a></li>
+                                    <li><a href="#">Festival</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="5-0_community.html"><img src="images/board.png" id="bar_icon"><b>COMMUNITY</b></a></li>
+                        </ul>
+                    </nav>
+
+                <!-- Section -->
+                    <section>
+                        <header class="major">
+                            <h2>POPULAR</h2>
+                        </header>
+                        <div class="mini-posts">
+                            <article>
+                                <a href="2-1_activity.html" class="image"><img src="images/highland.jpg" alt="" /></a>
+                                <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                            </article>
+                            <article>
+                                <a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
+                                <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                            </article>
+                            <article>
+                                <a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
+                                <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                            </article>
+                        </div>
+                    </section>
+
+                <!-- Section -->
+                    <section>
+                        <header class="major">
+                            <h2>CONTACT</h2>
+                        </header>
+                        <p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+                        <ul class="contact">
+                            <li class="icon solid fa-envelope"><a href="#">bonvoyage@gmail.com</a></li>
+                            <li class="icon solid fa-phone">(000) 000-0000</li>
+                            <li class="icon solid fa-home">1234 Somewhere Road #8254<br />
+                            Nashville, TN 00000-0000</li>
+                        </ul>
+                    </section>
+
+                <!-- Footer -->
+                    <footer id="footer">
+                        <p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://pixabay.com/ko/">pixabay</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+                    </footer>
+
+            </div>
         </div>
     </div>
-    <div id="map"></div>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="https://unpkg.com/leaflet-providers@1.5.0/leaflet-providers.js"></script>
-    <script>
-        // 지도 생성
-        var map = L.map('map').setView([20, 0], 2);
-
-        // 타일 레이어 추가 (OpenStreetMap 사용)
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 18,
-            attribution: '© OpenStreetMap'
-        }).addTo(map);
-
-        // 각 나라의 좌표와 이름 (예시로 몇 개의 나라만 추가)
-        var countries = [
-            { name: "South Korea", coords: [35.9078, 127.7669], url: "https://en.wikipedia.org/wiki/South_Korea" },
-            { name: "United States", coords: [37.0902, -95.7129], url: "https://en.wikipedia.org/wiki/United_States" },
-            { name: "France", coords: [46.6034, 1.8883], url: "https://en.wikipedia.org/wiki/France" },
-            { name: "Japan", coords: [36.2048, 138.2529], url: "https://en.wikipedia.org/wiki/Japan" }
-        ];
-
-        // 각 나라에 마커 추가 및 클릭 이벤트 핸들러 등록
-        countries.forEach(function(country) {
-            var marker = L.marker(country.coords).addTo(map);
-            marker.bindPopup(country.name);
-            marker.on('click', function() {
-                window.open(country.url, '_blank');
-            });
-        });
-    </script>
 </body>
 </html>
