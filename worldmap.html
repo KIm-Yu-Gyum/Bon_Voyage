@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive World Map</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="icon" href="images/main_icon.png">
+    <style>
+        #map {
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div class="inner">
+            <!-- Header -->
+                <header id="header">
+                    <a href="index.html" class="logo"><img src="images/main_icon.png" id="main_icon"><strong>Bon-Voyage</strong></a>
+                </header>
+        </div>
+    </div>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-providers@1.5.0/leaflet-providers.js"></script>
+    <script>
+        // 지도 생성
+        var map = L.map('map').setView([20, 0], 2);
+
+        // 타일 레이어 추가 (OpenStreetMap 사용)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+
+        // 각 나라의 좌표와 이름 (예시로 몇 개의 나라만 추가)
+        var countries = [
+            { name: "South Korea", coords: [35.9078, 127.7669], url: "https://en.wikipedia.org/wiki/South_Korea" },
+            { name: "United States", coords: [37.0902, -95.7129], url: "https://en.wikipedia.org/wiki/United_States" },
+            { name: "France", coords: [46.6034, 1.8883], url: "https://en.wikipedia.org/wiki/France" },
+            { name: "Japan", coords: [36.2048, 138.2529], url: "https://en.wikipedia.org/wiki/Japan" }
+        ];
+
+        // 각 나라에 마커 추가 및 클릭 이벤트 핸들러 등록
+        countries.forEach(function(country) {
+            var marker = L.marker(country.coords).addTo(map);
+            marker.bindPopup(country.name);
+            marker.on('click', function() {
+                window.open(country.url, '_blank');
+            });
+        });
+    </script>
+</body>
+</html>
