@@ -1102,6 +1102,23 @@ header.main > :last-child {
   position: right;
 }
 
+/* 06.14 김유겸 grid 수정 */
+.image-grid-sub {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  justify-content: center;
+  margin: 1em 0 1em 0;
+}
+
+.image-grid-sub img {
+  width: 100%; /* 너비를 상대적으로 설정 */
+  height: 100%; /* 높이를 자동으로 설정 */
+  object-fit: cover; /* 이미지 비율 유지 */
+}
+
+
+
 section > p {
   color: black;
 }
