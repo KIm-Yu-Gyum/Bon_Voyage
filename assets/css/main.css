@@ -1118,7 +1118,6 @@ header.main > :last-child {
 }
 
 
-
 section > p {
   color: black;
 }
@@ -1179,7 +1178,9 @@ section > p {
   margin: 0 0 1em 0;
 }
 
-/* 06.13 김유겸 Promotion 글꼴 수정*/
+.container #font {
+  margin: 0 0 1em 0;
+}
 
 
 /* Form */
