@@ -6,8 +6,16 @@ body {
   padding-top: 3rem;
   padding-bottom: 3rem;
   color: rgb(var(--bs-tertiary-color-rgb));
-}
+  }
 
+
+.d-block {
+    width: 100%; /* 반응형으로 이미지 너비를 100%로 설정 */
+    height: 100%; /* 이미지의 가로 세로 비율을 유지하도록 자동 조정 */
+    display: block; /* 블록 레벨 요소로 표시되도록 설정 */
+    margin: 0 auto; /* 수평 중앙 정렬 */
+    max-width: 100%; /* 이미지가 부모 컨테이너를 넘지 않도록 최대 너비 설정 */
+}
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
@@ -18,7 +26,7 @@ body {
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
-  bottom: 3rem;
+  bottom: 3em;
   z-index: 10;
 }
 
