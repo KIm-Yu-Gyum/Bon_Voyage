@@ -39,10 +39,17 @@
 }
 
 #bar_icon3 {
-    width: 100%;
+    width: 30%;
     height: auto;
-    position: relative;
+    float: center;
     overflow: hidden;
+}
+
+#map_icon {
+  width: 25px;
+  height: 25px;
+  position: relative;
+  margin: 0 10px 7px 0;
 }
 
 body {
