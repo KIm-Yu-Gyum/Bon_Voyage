@@ -49,16 +49,15 @@
 								{ name: "대만", coords: [23.6978, 120.9605], url: "3-6_taiwan.html" },
 								
                             ];
-                    
+					                 
                             // 각 나라에 마커 추가 및 클릭 이벤트 핸들러 등록
                             countries.forEach(function(country) {
                                 var marker = L.marker(country.coords).addTo(map);
                                 marker.bindPopup(country.name);
 								marker.bindTooltip(country.name);
                                 marker.on('click', function() {
-                                    window.open(country.url, '_blank');
+                                    window.location.href=country.url;});
                                 });
-                            });
                         </script>
                 </div>
             </div>
